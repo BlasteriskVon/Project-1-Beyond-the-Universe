@@ -1,0 +1,32 @@
+
+#body {
+    background-color: black;
+}
+
+.jumbotron {
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/bar.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-family: 'Unica One', cursive;
+    border: solid 2px white;
+    margin-top: 10%;
+  }
+
+.tagline {
+    font-size: 22px;
+}
+
+#search-div {
+margin: 0 auto;
+margin-top: 5%;
+margin-bottom: 5%;
+font-size: 28px;
+text-align: center;
+}
+
+footer {
+    color: grey;
+}

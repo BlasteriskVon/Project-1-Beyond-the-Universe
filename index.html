@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">    
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
     <title>Liquor Piquor 🍹</title>
 </head>
 
@@ -42,7 +44,7 @@
                     <button id= "submit-btn" type="button">Submit</button>
                 </div>
                 <div class="col-md-6" id="liquor-div">
-                    <input id="search-input" type="text" placeholder="Liquor Type (Vodka)">
+                    <input id="search-input-two" type="text" placeholder="Liquor Type (Vodka)">
                     <button id="submit-btn-two" type="button">Submit</button>
                 </div>
                 <a href="#footer"><p>Go to Recently Viewed</p></a>
@@ -138,10 +140,41 @@
 
           <div class="row">
 
-            <div class="col-md-6 mt-md-0 mt-3">
+            <div class="col-md-12 mt-md-0 mt-3">
  
               <h5 class="text-uppercase">Recently Viewed</h5>
               <p>Go back to the last drink you looked at.</p>
+
+              <div class="row">
+
+                <div class="col-md-6">
+    
+                        <div class="card mb-4">
+                            <div class="card-header">Previous Drink searches</div>
+                                <div class="card-body">
+                                    <table class="table table-sm table-hover" id="drink-table">
+                                        <tbody>
+                                            <tr></tr> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                </div>
+    
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header">Previous Liquor searches</div>
+                                <div class="card-body">
+                                    <table class="table table-sm table-hover" id='liquor-table'>
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </div>
+                    </div>
+    
+                </div>
       
             </div>
    
@@ -187,7 +220,8 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+    
+    <script src="javascript/app.js"></script>
 
 
 </body>

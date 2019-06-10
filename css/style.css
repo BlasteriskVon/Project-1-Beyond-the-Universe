@@ -34,7 +34,7 @@ font-size: 28px;
 text-align: center;
 }
 
-footer {
+#footer {
     color: grey;
 }
 
@@ -105,7 +105,19 @@ em {
 #heading {
     /* border: 3px solid paleturquoise; */
     text-transform: uppercase; 
-    font-size: 65px;
+    font-size: 62px;
+    text-align: center;
+}
+
+#drinkImage {
+    width: 200px;
+    height: 200px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 2%;
 }
 
 .info {

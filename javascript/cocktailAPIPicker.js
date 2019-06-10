@@ -19,6 +19,7 @@ function findDrinks(x){
         var ingredientsArray = gatherIngredients(drinkUsed);
         for(var i = 0;i < ingredientsArray.length;i++){
             var newThingy = $("<li>");
+            newThingy.attr("style", "list-style-type:disc");
             newThingy.text(ingredientsArray[i]);
             $("#ingredientsList").append(newThingy);
         }
@@ -63,6 +64,7 @@ function findDrinkViaID(x){
         var ingredientsArray = gatherIngredients(drinkUsed);
         for(var i = 0;i < ingredientsArray.length;i++){
             var newThingy = $("<li>");
+            newThingy.attr("style", "list-style-type:disc");
             newThingy.text(ingredientsArray[i]);
             $("#ingredientsList").append(newThingy);
         }
@@ -160,8 +162,6 @@ function nullChecker(x){
     }
 }
 
-$("#singleDrink").hide();
-
 /*for(var i = 1;i <= 15;i++){
     var text = $("<p>");
     textAdd = "ingredients.push(drink.strIngredient" + i + "+ \" \" + drink.strMeasure" + i + ")";
@@ -221,3 +221,5 @@ $(document).on("mouseout", ".clickTrigger", function(picture){
     var popping = $("#" + clickImage.attr("popTo"));
     popping.hide();
 });
+
+$("#singleDrink").hide();

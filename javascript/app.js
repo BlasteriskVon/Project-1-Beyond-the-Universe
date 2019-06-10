@@ -17,6 +17,7 @@
  
   // button for liquor search
   $("#submit-btn").on("click", function(event){
+    event.preventDefault();
 
     // user's search
     var searchDrink = $("#search-input").val().trim();
@@ -38,20 +39,21 @@
   })
 
   $("#submit-btn-two").on("click", function(event){
+    event.preventDefault();
 
     // user's search
     var searchIngredient = $("#search-input-two").val().trim();
 
     // "temporary" object for holding drink data
-    var newDrink = {
+    var newIngredient = {
         ingredient: searchIngredient,
     };
 
     // pushes drink data to the database
-    database.ref().push(newDrink);
+    database.ref().push(newIngredient);
 
     // console logs the temporary variable
-    console.log(newDrink.ingredient);
+    console.log(newIngredient.ingredient);
 
     // clears the search box
     $("#search-input-two").val("");
@@ -60,28 +62,25 @@
 
   // creates firebase event for adding drinks and ingredients  
     
-    database.ref().on("child_added", function(childSnapshot){
+    database.ref().limitToLast(10).on("child_added", function(childSnapshot){
 
       var searchDrink = childSnapshot.val().drink;
+      var searchIngredient = childSnapshot.val().ingredient;
   
       // creates new row of past searched drinks & ingredients
-      var newRow = $("<tr>").text(searchDrink);
+      var newRow = $("<tr>").append(
+        $("<tr>").text(searchDrink),
+        $("<tr>").text(searchIngredient),
+      );
   
       // appends the new row to the table/html page
       $("#drink-table > tbody").prepend(newRow);
+     
   
     });
 
-    database.ref().on("child_added", function(childSnapshot){
 
-      var searchIngredient = childSnapshot.val().ingredient;
-      
-      // creates new row of past searched drinks & ingredients
-      var newRow = $("<tr>").text(searchIngredient);
-      
-      // appends the new row to the table/html page
-      $("#liquor-table > tbody").prepend(newRow);
-    });
+
 
       
 

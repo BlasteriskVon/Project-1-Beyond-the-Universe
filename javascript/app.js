@@ -32,9 +32,6 @@
 
     // console logs the temporary variable
     console.log(newDrink.drink);
-
-    // clears the search box
-    $("#search-input").val("");
     
   })
 
@@ -55,9 +52,6 @@
     // console logs the temporary variable
     console.log(newIngredient.ingredient);
 
-    // clears the search box
-    $("#search-input-two").val("");
-    
   });
 
   // creates firebase event for adding drinks and ingredients  
@@ -76,8 +70,8 @@
       // appends the new row to the table/html page
       $("#drink-table > tbody").prepend(newRow);
      
-  
     });
+
 
 
 

@@ -1,3 +1,4 @@
+//the image class name is "resizeImageTacoTuesdays"
 function findDrinks(x){
     var search = x;
     $("#add-info-div").empty();
@@ -11,13 +12,14 @@ function findDrinks(x){
         if(response.drinks === null){
             $("#add-info-div").text("Sorry! No results found! :(");
         } else if(response.drinks.length === 1){
-        drinkUsed = response.drinks[0];
+        var drinkUsed = response.drinks[0];
         $("#heading").text(drinkUsed.strDrink);
         $("#drinkImage").attr("src", drinkUsed.strDrinkThumb);
         $("#drinkImage").attr("style", "width: 100%; height: auto");
         var ingredientsArray = gatherIngredients(drinkUsed);
         for(var i = 0;i < ingredientsArray.length;i++){
             var newThingy = $("<li>");
+            newThingy.attr("style", "list-style-type:disc");
             newThingy.text(ingredientsArray[i]);
             $("#ingredientsList").append(newThingy);
         }
@@ -35,11 +37,39 @@ function findDrinks(x){
                 newImage.css({"width":"300px", "height":"auto"});
                 newImage.attr("drink", response.drinks[i].strDrink);
                 newText = newText.prepend(newImage);*/
-                var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:yellow; color:black'>" + response.drinks[i].strDrink + "</div>" +
-                "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].strDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger' alt='drink image didn't appear...'>");
+                var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
+                "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();
             }
+        }
+    })
+}
+
+function findDrinkViaID(x){
+    var search = x;
+    $("#add-info-div").empty();
+    $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + search + "&apikey=1",
+        method: "GET"
+    }).then(function(response){
+        $("#singleDrink").hide();
+        if(response.drinks === null){
+            $("#add-info-div").text("Sorry! No results found! :(");
+        } else {
+        var drinkUsed = response.drinks[0];
+        $("#heading").text(drinkUsed.strDrink);
+        $("#drinkImage").attr("src", drinkUsed.strDrinkThumb);
+        $("#drinkImage").attr("style", "width: 100%; height: auto");
+        var ingredientsArray = gatherIngredients(drinkUsed);
+        for(var i = 0;i < ingredientsArray.length;i++){
+            var newThingy = $("<li>");
+            newThingy.attr("style", "list-style-type:disc");
+            newThingy.text(ingredientsArray[i]);
+            $("#ingredientsList").append(newThingy);
+        }
+        $("#instructions").text(drinkUsed.strInstructions);
+        $("#singleDrink").show();
         }
     })
 }
@@ -80,8 +110,8 @@ function findIngredients(x){
                     newImage.css({"width":"300px", "height":"auto"});
                     newImage.attr("drink", response.drinks[i].strDrink);
                     newText = newText.prepend(newImage);*/
-                    var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:yellow; color:black'>" + response.drinks[i].strDrink + "</div>" +
-                "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].strDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger' alt='drink image didn't appear...'>");
+                    var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
+                "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();
                 }
@@ -132,8 +162,6 @@ function nullChecker(x){
     }
 }
 
-$("#singleDrink").hide();
-
 /*for(var i = 1;i <= 15;i++){
     var text = $("<p>");
     textAdd = "ingredients.push(drink.strIngredient" + i + "+ \" \" + drink.strMeasure" + i + ")";
@@ -143,7 +171,7 @@ $("#singleDrink").hide();
 
 $(document).on("click", ".clickTrigger", function(clicked){
     var drinkToGet = $(clicked.target).attr("drink");
-    findDrinks(drinkToGet);
+    findDrinkViaID(drinkToGet);
 });
 
 $(document).on("click", "#submit-btn", function(event){
@@ -193,3 +221,5 @@ $(document).on("mouseout", ".clickTrigger", function(picture){
     var popping = $("#" + clickImage.attr("popTo"));
     popping.hide();
 });
+
+$("#singleDrink").hide();

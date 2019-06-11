@@ -10,7 +10,10 @@ function findDrinks(x){
         //let's test getting the array length.
         $("#singleDrink").hide();
         if(response.drinks === null){
-            $("#add-info-div").text("Sorry! No results found! :(");
+            var whiteText = $("<p>");
+            whiteText.attr("class", "wBoy");
+            whiteText.text("Sorry! No results found! :(");
+            $("#add-info-div").append(whiteText);
         } else if(response.drinks.length === 1){
         var drinkUsed = response.drinks[0];
         $("#heading").text(drinkUsed.strDrink);
@@ -55,7 +58,10 @@ function findDrinkViaID(x){
     }).then(function(response){
         $("#singleDrink").hide();
         if(response.drinks === null){
-            $("#add-info-div").text("Sorry! No results found! :(");
+            var whiteText = $("<p>");
+            whiteText.attr("class", "wBoy");
+            whiteText.text("Sorry! No results found! :(");
+            $("add-info-div").append(whiteText);
         } else {
         var drinkUsed = response.drinks[0];
         $("#heading").text(drinkUsed.strDrink);
@@ -83,7 +89,10 @@ function findIngredients(x){
     }).then(function(response){
         $("#singleDrink").hide();
         if(response.ingredients === null){
-            $("#add-info-div").text("Sorry! No results found! :(");
+            var whiteText = $("<p>");
+            whiteText.attr("class", "wBoy");
+            whiteText.text("Sorry! No results found! :(");
+            $("#add-info-div").append(whiteText);
         } else {
             ingredientUsed = response.ingredients[0];
             var newIngredient = $("<div class='card' style='width:100%'>" +

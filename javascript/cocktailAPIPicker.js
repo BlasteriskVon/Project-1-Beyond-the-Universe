@@ -37,7 +37,9 @@ function findDrinks(x){
                 newImage.css({"width":"300px", "height":"auto"});
                 newImage.attr("drink", response.drinks[i].strDrink);
                 newText = newText.prepend(newImage);*/
-                var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:78px'>" + response.drinks[i].strDrink + "</div>" +
+
+                var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
+
                 "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();
@@ -110,7 +112,11 @@ function findIngredients(x){
                     newImage.css({"width":"300px", "height":"auto"});
                     newImage.attr("drink", response.drinks[i].strDrink);
                     newText = newText.prepend(newImage);*/
-                    var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:78px'>" + response.drinks[i].strDrink + "</div>" +
+
+                    var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
+
+                    
+
                 "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();

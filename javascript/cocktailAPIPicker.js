@@ -37,9 +37,7 @@ function findDrinks(x){
                 newImage.css({"width":"300px", "height":"auto"});
                 newImage.attr("drink", response.drinks[i].strDrink);
                 newText = newText.prepend(newImage);*/
-
                 var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
-
                 "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();
@@ -112,11 +110,7 @@ function findIngredients(x){
                     newImage.css({"width":"300px", "height":"auto"});
                     newImage.attr("drink", response.drinks[i].strDrink);
                     newText = newText.prepend(newImage);*/
-
                     var newStuff = $("<div id='popup" + response.drinks[i].idDrink + "' style='background-color:lavender; color:black; font-size:60px'>" + response.drinks[i].strDrink + "</div>" +
-
-                    
-
                 "<img src='" + response.drinks[i].strDrinkThumb + "' drink='" + response.drinks[i].idDrink + "'style='width:300px; height:auto' popTo='popup" + response.drinks[i].idDrink + "' class='clickTrigger resizeImageTacoTuesdays' alt='drink image didn't appear...'>");
                 $("#add-info-div").append(newStuff);
                 $("#popup" + response.drinks[i].idDrink).hide();
@@ -192,11 +186,11 @@ $(document).on("click", "#submit-btn", function(event){
 
 $(document).on("click", "#submit-btn-two", function(event){
     event.preventDefault();
-    if($("#search-input2").val() != ""){
-        var ingredientInput = $("#search-input2").val();
+    if($("#search-input-two").val() != ""){
+        var ingredientInput = $("#search-input-two").val();
     $("#add-info-div").empty();
     findIngredients(ingredientInput);
-    $("#search-input2").val("");
+    $("#search-input-two").val("");
     }
 });
 

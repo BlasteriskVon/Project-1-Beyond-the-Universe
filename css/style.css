@@ -131,3 +131,17 @@ em {
     margin-bottom: 5%;
 }
 
+.recents-table {
+    font-size: 24px;
+    color: wheat;
+    border-top: 1px solid white;
+}
+
+.recents-card {
+    margin-left: 50%;
+}
+
+.go-to {
+    font-size: 32px;
+    color: white;
+}

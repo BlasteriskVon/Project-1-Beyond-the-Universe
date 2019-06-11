@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">    
-    
+    <link href="https://fonts.googleapis.com/css?family=Unica+One&display=swap" rel="stylesheet">
+
 
     <title>Liquor Piquor 🍹</title>
 </head>
@@ -22,40 +22,42 @@
     <div class="jumbotron jumbotron-fluid" id="section-one">
 
         <div class="container">
-                <div class="sandbox sandbox-correct-pronounciation">
+            <div class="sandbox sandbox-correct-pronounciation">
 
-                        <p class="tagline">Your go to spot for anything alcohol. </p>
-                        <p class="tagline">Ever go to a bar and want a specific drink but you cant remember the name of it?</p>
-                        <p class="tagline">With The Liquor Piquor you can search by ingredients or one word for a drink name with...</p>
-                        <h1 class="heading heading-correct-pronounciation">
-                          The
-                          <em class="animated shake">Liquor </em>
-                         Piquor 
-                        </h1>
-                      </div>
-          <!-- <h1 class="display-4 animated shake" class="navbar-brand">Liquor Piquor (Picker) 🍹</h1> -->
-          
+                <p class="tagline">Your go to spot for anything alcohol. </p>
+                <p class="tagline">Ever go to a bar and want a specific drink but you cant remember the name of it?</p>
+                <p class="tagline">You can search by ingredients or one word for a drink name with...</p>
+                <h1 class="heading heading-correct-pronounciation">
+                    The
+                    <em class="animated shake">Liquor </em>
+                    Piquor
+                </h1>
+            </div>
+            <!-- <h1 class="display-4 animated shake" class="navbar-brand">Liquor Piquor (Picker) 🍹</h1> -->
 
 
-          <div class="row" id="section-two">
+
+            <div class="row" id="section-two">
 
                 <div class="col-md-6" id="name-div">
                     <form role="form">
                         <div class="form-group">
-                    <input id="search-input" type="text" placeholder="Name of Drink">
+                            <input id="search-input" type="text" placeholder="Name of Drink">
                         </div>
-                    <button id= "submit-btn" type="submit">Submit</button>
+                        <button id="submit-btn" type="submit">Submit</button>
                     </form>
                 </div>
                 <div class="col-md-6" id="liquor-div">
                     <form role="form">
                         <div class="form-group">
-                    <input id="search-input-two" type="text" placeholder="Ingredient">
-                    </div>
-                    <button id="submit-btn-two" type="submit">Submit</button>
+                            <input id="search-input-two" type="text" placeholder="Ingredient">
+                        </div>
+                        <button id="submit-btn-two" type="submit">Submit</button>
                     </form>
                 </div>
-                <a href="#footer"><p class="go-to">Go to Recently Viewed</p></a>
+                <a href="#footer">
+                    <p class="go-to">Go to Recently Viewed</p>
+                </a>
             </div>
         </div>
     </div>
@@ -64,63 +66,63 @@
     <div class="container section-three sorry" id="add-info-div"></div>
 
 
-<div class="container" id="singleDrink">
-    <div class="row row-spacing" id="section-four">
+    <div class="container" id="singleDrink">
+        <div class="row row-spacing" id="section-four">
             <div class="col-md-6">
-                    <div class="card">
-                            <div class="card-body">
-                              <h1 id="heading"></h1>
-                            </div>
-                          </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h1 id="heading"></h1>
+                    </div>
+                </div>
             </div>
             <div class="col-md-4">
-                    <div class="card">
-                            <div class="card-body info" id="image">
-                                <img id="drinkImage" src="http://placeimg.com/200/200/any" alt="drink image: Tequila">
-                            </div>
-                          </div>
-            </div>
-    </div>   
-
-
-    <div class="row row-spacing" id="section-five">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-body info" id="description">
-                    <p class="card-headers">Description/History</p>
-                    <div id="line-header"></div>
-                    <p id="descriptionText"></p>
+                <div class="card">
+                    <div class="card-body info" id="image">
+                        <img id="drinkImage" src="http://placeimg.com/200/200/any" alt="drink image: Tequila">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>    
-    
 
-    <div class="row row-spacing" id="section-six">
-        <div class="col-md-6" >
-            <div class="card">
-                <div class="card-body info" id="drink-name">
-                    <p class="card-headers">Drink Tips</p>
-                    <div id="line-header"></div>
-                    <p id="tips"></p>
+
+        <div class="row row-spacing" id="section-five">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body info" id="description">
+                        <p class="card-headers">Description/History</p>
+                        <div id="line-header"></div>
+                        <p id="descriptionText"></p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6" >
+
+
+        <div class="row row-spacing" id="section-six">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body info" id="drink-name">
+                        <p class="card-headers">Drink Tips</p>
+                        <div id="line-header"></div>
+                        <p id="tips"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-body info" id="ingredients">
                         <p class="card-headers">Ingredients list</p>
                         <div id="line-header"></div>
                         <ul id="ingredientsList">
-                                <!--li-->
-                            </ul>
+                            <!--li-->
+                        </ul>
                     </div>
                 </div>
             </div>
-    </div>
-   
+        </div>
 
-    <div class="row row-spacing" id="section-seven">
+
+        <div class="row row-spacing" id="section-seven">
 
             <div class="col-md-12">
                 <div class="card">
@@ -131,65 +133,65 @@
                     </div>
                 </div>
             </div>
-        </div>  
-        </div>  
+        </div>
+    </div>
 
-</div>
+    </div>
 
-<div class="jump">
+    <div class="jump">
 
-    <a href="#search-input">🍹 Return to Search
-    </a>
-</div>
+        <a href="#search-input">🍹 Return to Search
+        </a>
+    </div>
 
-<footer class="page-footer font-small blue pt-4" id="footer">
+    <footer class="page-footer font-small blue pt-4" id="footer">
 
 
         <div class="container-fluid text-center text-md-left">
 
-          <div class="row">
+            <div class="row">
 
-            <div class="col-md-12 mt-md-0 mt-3 recents-table">
- 
-              <p class="text-uppercase">Recently Viewed</p>
-              <p>Go back to the last drink you looked at.</p>
+                <div class="col-md-12 mt-md-0 mt-3 recents-table">
 
-              <div class="row">
+                    <p class="text-uppercase">Recently Viewed</p>
+                    <p>Go back to the last drink you looked at.</p>
 
-                <div class="col-md-8">
-    
-                        <div class="card mb-4 recents-card">
+                    <div class="row">
+
+                        <div class="col-md-8">
+
+                            <div class="card mb-4 recents-card">
                                 <div class="card-body">
                                     <table class="table table-sm table-hover" id="drink-table">
                                         <tbody>
-                                             
+
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
                         </div>
+
+
+                    </div>
+
                 </div>
-    
-    
-                </div>
-      
             </div>
-          </div>
-       
 
-        <div class="footer-copyright text-center py-3">AV JM JH WD
+
+            <div class="footer-copyright text-center py-3">AV JM JH WD
                 <a href="https://github.com/BlasteriskVon/Project-1-Beyond-the-Universe" target="blank"> Github</a>
-              </div>
+            </div>
 
-      </footer>
-    
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
     <script src="javascript/app.js"></script>
     <script src="javascript/cocktailAPIPicker.js"></script>
-    
+
 
 
 </body>

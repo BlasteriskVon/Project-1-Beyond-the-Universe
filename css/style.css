@@ -1,18 +1,18 @@
 html {
     scroll-behavior: smooth;
     height: 500px;
-}
-
-#body {
+ }
+ 
+ #body {
     background-color: black;
     /* font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'Unica One', Arial, Helvetica, sans-serif;
-
-}
-
-.jumbotron {
+    font-family: ‘Unica One’, Arial, Helvetica, sans-serif;
+ 
+ }
+ 
+ .jumbotron {
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url("../images/bg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(“../images/bg.jpg”);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,61 +20,66 @@ html {
     border: solid 2px white;
     margin-top: -10%;
   }
-
-.tagline {
+ 
+ .tagline {
     font-size: 26px;
-}
-
-#name-div,
-#liquor-div {
-margin: 0 auto;
-margin-top: 5%;
-margin-bottom: 5%;
-font-size: 28px;
-text-align: center;
-}
-
-#footer {
+ }
+ 
+ #name-div,
+ #liquor-div {
+ margin: 0 auto;
+ margin-top: 5%;
+ margin-bottom: 5%;
+ font-size: 28px;
+ text-align: center;
+ }
+ 
+ footer {
     color: grey;
-}
-
-
-
-/* **************Heading********** */
-
-
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Cardo:400italic);
-
-
-body {
+ }
+ 
+ .go-to-footer {
+    font-size: 26px;
+    color: white;
+ }
+ 
+ 
+ 
+ /* **************Heading********** */
+ 
+ 
+ @import url(https://fonts.googleapis.com/css?family=EB+Garamond%7CCardo:400italic);
+ 
+ 
+ body {
     margin: 0;
-}
-
-
-.sandbox-correct-pronounciation {
+ }
+ 
+ 
+ .sandbox-correct-pronounciation {
   padding: 10em 0 10em 0;
-}
-
-.heading-correct-pronounciation {
-
+ }
+ 
+ .heading-correct-pronounciation {
+ 
   margin: auto;
   text-align: center;
   position: relative;
-}
-
-
-.heading {
+ }
+ 
+ 
+ .heading {
   color: #fff;
-  font-family: 'Cardo', serif;
+  font-family: ‘Cardo’, serif;
   /* font-size: 1.5em; */
   font-weight: normal;
   font-style: italic;
   letter-spacing: 0.1em;
   line-height: 2.2em;
-}
-
-em {
-  font-family: 'EB Garamond', serif;
+ }
+ 
+ em {
+  font-family: ‘EB Garamond’, serif;
   font-size: 2.5em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -82,64 +87,62 @@ em {
   font-style:normal;
   padding-top: 0.1em;
  
-
-}
-
-.bottom {
+ 
+ }
+ 
+ .bottom {
   font-size: 1.5em;
   letter-spacing: 0.07em;
   font-size: 1em;
   display: block;
-}
-
-
-/* **************************RESUlTS PAGE STYLING*************** */
-
-.card-body {
+ }
+ 
+ 
+ /* **************************RESUlTS PAGE STYLING*************** */
+ 
+ .card-body {
     background-color:   #e6f5ff;
     padding: 5%;
     border: 2px solid white;
     box-shadow: 5px 5px grey;
-}
-
-#heading {
+ }
+ 
+ #heading {
     /* border: 3px solid paleturquoise; */
-    text-transform: uppercase; 
-    font-size: 62px;
+    text-transform: uppercase;
+    font-size: 65px;
     text-align: center;
-}
-
-#drinkImage {
-    width: 200px;
-    height: 200px;
-}
-
-img {
-    width: 200px;
-    height: 200px;
-    margin: 2%;
-}
-
-.info {
+ }
+ 
+ .info {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.card-headers {
+ }
+ 
+ .card-headers {
     font-size: 26px;
-}
-
-#line-header {
+ }
+ 
+ #line-header {
     border-bottom: 2px solid white;
     margin-bottom: 5%;
-}
-
-.jump {
+ }
+ 
+ .jump {
     font-size: 35px;
     text-align: right;
-}
-
-.row-spacing {
+ }
+ 
+ .row-spacing {
     margin-bottom: 5%;
-}
-
+ }
+ 
+ #table {
+    font-size: 24px;
+ }
+ 
+ .recently-viewed {
+    font-size: 24px;
+    color:wheat;
+    border-top: 2px solid white;
+ }

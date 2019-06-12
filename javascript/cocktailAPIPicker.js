@@ -1,6 +1,7 @@
 function findDrinks(x){
     var search = x;
     $("#add-info-div").empty();
+    $("#ingredientsList").empty();
     $.ajax({
         url: "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + search + "&apikey=1",
         method: "GET"
@@ -72,6 +73,7 @@ function findDrinks(x){
 function findDrinkViaID(x){
     var search = x;
     $("#add-info-div").empty();
+    $("#ingredientsList").empty();
     $.ajax({
         url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + search + "&apikey=1",
         method: "GET"
@@ -132,6 +134,7 @@ function findDrinkViaID(x){
 function findIngredients(x){
     var search = x;
     $("#add-info-div").empty();
+    $("#ingredientsList").empty();
     $.ajax({
         url: "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=" + search + "&apikey=1",
         method: "GET"

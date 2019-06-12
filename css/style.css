@@ -152,10 +152,14 @@ em {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 50px;
+    margin: 5%;
     /* background-color: #e6f5ff; */
     
 }
 
+#add-info-div, img {
+    margin: 5%;
+}
 .wBoy {
     color: white;
 }

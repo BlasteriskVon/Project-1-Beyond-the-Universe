@@ -54,7 +54,6 @@ function findDrinks(x){
                 // remove cite error
                 blurb.find('.mw-ext-cite-error').remove();
                 //Adds the Blurb to the Article div on the HTML page or rather, the description div
-                //$('#article').html($(blurb).find('p'));
                 $('#descriptionText').html($(blurb).find('p'));
 
             },
@@ -126,7 +125,6 @@ function findDrinkViaID(x){
                 // remove cite error
                 blurb.find('.mw-ext-cite-error').remove();
                 //Adds the Blurb to the Article div on the HTML page or rather, the description div
-                //$('#article').html($(blurb).find('p'));
                 $('#descriptionText').html($(blurb).find('p'));
             },
             error: function (errorMessage) {//do this

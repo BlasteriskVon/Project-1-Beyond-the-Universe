@@ -106,7 +106,7 @@ function findDrinkViaID(x){
         $.ajax({
             type: "GET",
 //the API URL with the searchText variable placed inside
-            url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + searchTextB + "&callback=?",
+            url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + searchTextB + "&callback=?",
             contentType: "application/json; charset=utf-8",
             async: false,
             dataType: "json",

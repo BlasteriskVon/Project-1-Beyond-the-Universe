@@ -31,7 +31,7 @@ function findDrinks(x){
         //Getting all the goods from Wikipedia
         $.ajax({
             type: "GET",
-            url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + searchTextA + "&callback=?",
+            url: "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + searchTextA + "&callback=?",
             contentType: "application/json; charset=utf-8",
             async: false,
             dataType: "json",
